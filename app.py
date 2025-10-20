@@ -48,6 +48,7 @@ ObjectDetectionModule = _try_import_class('modules.week05.object_detection_modul
 SegmentationModule = _try_import_class('modules.week06.segmentation_module', 'SegmentationModule')
 ActionRecognitionModule = _try_import_class('modules.week07.action_recognition_module', 'ActionRecognitionModule')
 EmotionRecognitionModule = _try_import_class('modules.week08.emotion_recognition_module', 'EmotionRecognitionModule')
+GenerationModule = _try_import_class('modules.week09.generation_module', 'GenerationModule')
 
 # 페이지 설정
 st.set_page_config(
@@ -71,6 +72,7 @@ class SmartVisionApp:
             'Week 6: Segmentation & SAM': SegmentationModule,
             'Week 7: Action Recognition': ActionRecognitionModule,
             'Week 8: Emotion Recognition': EmotionRecognitionModule,
+            'Week 9: Generation': GenerationModule,
         }
 
     def run(self):

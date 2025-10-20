@@ -51,3 +51,11 @@ build/
 *.pth
 *.onnx
 *.ckpt
+
+# Large Video Files (use download script or external storage)
+*.mp4
+*.avi
+*.mov
+*.mkv
+data/road_video.mp4
+data/*.mp4
