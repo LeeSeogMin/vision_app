@@ -49,6 +49,8 @@ SegmentationModule = _try_import_class('modules.week06.segmentation_module', 'Se
 ActionRecognitionModule = _try_import_class('modules.week07.action_recognition_module', 'ActionRecognitionModule')
 EmotionRecognitionModule = _try_import_class('modules.week08.emotion_recognition_module', 'EmotionRecognitionModule')
 GenerationModule = _try_import_class('modules.week09.generation_module', 'GenerationModule')
+AutonomousDrivingModule = _try_import_class('modules.week10.autonomous_driving_module', 'AutonomousDrivingModule')
+SmartCCTVModule = _try_import_class('modules.week11_smart_cctv.smart_cctv_module', 'SmartCCTVModule')
 
 # 페이지 설정
 st.set_page_config(
@@ -73,6 +75,8 @@ class SmartVisionApp:
             'Week 7: Action Recognition': ActionRecognitionModule,
             'Week 8: Emotion Recognition': EmotionRecognitionModule,
             'Week 9: Generation': GenerationModule,
+            'Week 10: Autonomous Driving': AutonomousDrivingModule,
+            'Week 11: Smart CCTV': SmartCCTVModule,
         }
 
     def run(self):
@@ -105,6 +109,9 @@ class SmartVisionApp:
             - Week 6: Segmentation & SAM ✅
             - Week 7: Action Recognition ✅
             - Week 8: Emotion Recognition ✅
+            - Week 9: Stable Diffusion ✅
+            - Week 10: Autonomous Driving ✅
+            - Week 11: Smart CCTV ✅
             """)
 
             # API 사용 안내
@@ -183,6 +190,9 @@ class SmartVisionApp:
                 "Week 6: Segmentation & SAM": 100,
                 "Week 7: Action Recognition": 100,
                 "Week 8: Emotion Recognition": 100,
+                "Week 9: Generation": 100,
+                "Week 10: Autonomous Driving": 100,
+                "Week 11: Smart CCTV": 100,
             }
 
             for week, progress in progress_data.items():
@@ -246,6 +256,30 @@ class SmartVisionApp:
             - VAD 3차원 감정 모델
             - 멀티모달 분석 (이미지 + 텍스트)
             - 시계열 감정 변화 추적
+            """)
+
+            st.subheader("✅ Week 9: Stable Diffusion")
+            st.markdown("""
+            - Text-to-Image 생성 (Stable Diffusion XL)
+            - Prompt Engineering & 네거티브 프롬프트
+            - ControlNet (Canny, Depth, Pose)
+            - ComfyUI 워크플로우 통합
+            """)
+
+            st.subheader("✅ Week 10: Autonomous Driving")
+            st.markdown("""
+            - SAE 자율주행 레벨 (0-5)
+            - 3-Tier 차선 인식 (Hough, Polynomial, LaneNet)
+            - YOLOv8 객체 탐지 + ByteTrack 추적
+            - IPM 거리 추정 & 통합 파이프라인
+            """)
+
+            st.subheader("✅ Week 11: Smart CCTV")
+            st.markdown("""
+            - YOLOv8 실시간 객체 탐지 (사람/차량)
+            - ByteTrack 다중 객체 추적
+            - ROI 침입/배회 감지
+            - 히트맵 분석 & 대시보드
             """)
 
         st.markdown("---")
