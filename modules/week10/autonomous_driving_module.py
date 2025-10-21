@@ -2299,4 +2299,16 @@ if __name__ == "__main__":
     def render_deployment(self):
         """실전 배포 (간단 버전)"""
         st.header("💻 실전 배포")
+
+        st.markdown("""
+        ### 🎥 실전 배포 데모 영상
+
+        자율주행 시스템의 실제 동작을 확인하세요:
+        """)
+
+        # YouTube 영상 임베드
+        st.video("https://youtu.be/ZSJDu0kSF8Q?si=rOnB55Z4qvC3eIl0")
+
+        st.markdown("---")
+
         st.info("TensorRT 최적화 및 Edge 디바이스 배포 가이드입니다. 전체 구현은 Colab 노트북을 참조하세요.")
